@@ -1,0 +1,62 @@
+Write up
+
+MechaCar_mpg Data
+
+From the MechaCar_mpg dataset a multiple linear regression model for mpg was created
+
+The formula:
+mpg = 6.27(vehicle length) + 0(vehicle weight) + 0.07(spoiler angle) + 3.55(ground clearance) - 3.41(All Wheel Drive) - 104
+
+The generated summary statistics p-values, Pr(>|t|), for the variables show that in the dataset the variables that have a non-random amount of variance to mpg values are:
+
+- vehicle length at 2.60e^-12
+- ground clearance at 5.21e^-8
+- (Intercept) at 5.08e^-8
+
+The above values are listed as non-random amount of variance as they are lower than the 0.05 significance level.
+
+The slopes of the multiple regression level are not zero for vehicle length, ground clearance and AWD as the p-val of our linear regression, 5.35e^-11 is lower than the 0.05 significance level.
+
+From the r-squared value of 0.71 indicates that about 71% of all mpg predicitions will be accurate indicating that our model can somewhat effectively predict mpg of MechaCar prototypes.
+
+
+Suspension_Coil Data
+
+Summary:
+
+The data from Suspension_Coil set is normally distributed around the mean with a median of 1500 and a mean of 1498.78.
+The standard deviation of the sample distribution is 8.73.
+The variance of the sample distribution is 76.23 which is under the 100 lbs per inch.
+Thus the suspension coil data meets the design specs required for the MechaCar.
+
+
+T-Test:
+
+Null Hypothesis:There is no significant difference between sample mean and population mean at the 0.05 significant level.
+Alternative Hypothesis:There is a significant difference between sample mean and population mean at the 0.05 significant level.
+
+Population Mean: 1500psi
+
+From the T-test, we obtained a p-value of 0.5117 which is greater than our significance level.
+Thus there is insufficient data to reject the null hypothesis.
+Therefore the population the population mean and dataset mean are statistically similar.
+
+
+
+Design Own Study
+
+A high fuel efficieny appears to be implied as a major selling point for the Mechacars.
+Thus we would need to test if the prototype vehilces are more fuel efficient that other vehicles on market.
+To solve this we need to collect a range of fuel efficiencies from our comparable vehicles on the market and compare them to the fuel efficiency levels for the Mechacar prototype.
+
+Assumptions we need for our data is that the data is numerical and continuous, each is randomly selected, data sample is sufficiently large, and the variances should be similar.
+
+The null hypothesis would state that there is no significant difference between the Mechacar mpg and the similar competitors' mpg.
+The alternative hypothesis would be that the mpg of Mechachar is greater than the similar competitors' mpg.
+
+We would use a paried t-test to compare the data.
+X would be the Mechacar prototype vehicle mpg dataset, with Y as the competitors' mpg.
+Paird would be set to "True".
+
+If the resulting p-value is smaller than 0.05 we would have enough to reject the null hypothesis.
+This would mean that the Mechacar Prototype vehicle will have a better MPG.
